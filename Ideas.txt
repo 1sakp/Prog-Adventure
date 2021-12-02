@@ -10,7 +10,7 @@ Theo room:
 
 Isak room:
     Gladiator arena with puzzle
-
+    Win items in fights
 Domenik room: 
     graveyard - key
     dungeon - secret passage to mansion 
