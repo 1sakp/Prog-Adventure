@@ -10,10 +10,34 @@ Theo room:
 
 Isak room:
     Gladiator arena with puzzle
+<<<<<<< HEAD
     Win items in fights
 Domenik room: 
     graveyard - key
     dungeon - secret passage to mansion 
     abandoned well - shovel 
+=======
 
-    mansion - monster/idk attackera, bargain, offer something 
+Dominik Idea:
+>>>>>>> 0de111e886d7356ed2fc3ea699adbf447bc01a14
+
+#you come down a rope into the well, when you reach the bottom you are met with a small cave, near the bottom you find a shovel, you can squeeze through a gap in the wall to come to the bigger cave, you find remains of people, drawings and an old spear, picking up the spear starts a fight with some giant rats, once defeated you leave the well with a shovel and the old spear.
+abandoned well - shovel, spear
+
+#you are met by a soul who need help moving to the after life(has to do with some cave drawings or idk), once he is in the afterlife you gain full access to the graveyard, you dig up the grave that was recently covered to get the key to the dungeon, and some precious jewlery.
+graveyard - key, jewlery.
+
+#once you get the key you can open the lock to the door, go down in the dungeon, after some fighting you get to some open chambers where you find a shield and a sword, upgrade to spear, the jewlery ups your def and hp also 
+dungeon - secret passage to mansion, 
+    
+
+
+
+mansion - monster/idk attackera, bargain, offer something 
+
+
+
+
+hit_th}
+hit_dm} if we have to use a similar variable, but should just use all the time
+hit_is}
