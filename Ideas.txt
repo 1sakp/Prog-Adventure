@@ -1,5 +1,12 @@
-graveyard
-dungeon
-abandoned well
+man ska gå in i en scp()
 
-mansion
+
+
+
+
+Domenik room: 
+    graveyard - key
+    dungeon - secret passage to mansion 
+    abandoned well - shovel 
+
+    mansion - monster/idk attackera, bargain, offer something 
