@@ -10,19 +10,16 @@ Theo room:
 
 Isak room:
     Gladiator arena with puzzle
-<<<<<<< HEAD
     Win items in fights
 Domenik room: 
     graveyard - key
     dungeon - secret passage to mansion 
     abandoned well - shovel 
-=======
 
 
 
 
 Dominik Idea:
->>>>>>> 0de111e886d7356ed2fc3ea699adbf447bc01a14
 
 #you come down a rope into the well, when you reach the bottom you are met with a small cave, near the bottom you find a shovel, you can squeeze through a gap in the wall to come to the bigger cave, you find remains of people, drawings and an old spear, picking up the spear starts a fight with some giant rats, once defeated you leave the well with a shovel and the old spear.
 abandoned well - shovel, spear
