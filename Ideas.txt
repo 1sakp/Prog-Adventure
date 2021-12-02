@@ -5,7 +5,7 @@ Theo room:
     Puzzle in a theater 
     performance
     stealing
-    sedusing
+    seduction 
     
 
 Isak room:
@@ -17,6 +17,9 @@ Domenik room:
     dungeon - secret passage to mansion 
     abandoned well - shovel 
 =======
+
+
+
 
 Dominik Idea:
 >>>>>>> 0de111e886d7356ed2fc3ea699adbf447bc01a14
