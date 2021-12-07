@@ -20,7 +20,7 @@ def start_isak():
                   
                   Dr.G: It seems this is the puzzle. Look you can input three numbers. I wonder what the answer is!
                   You can input 3 numbers like this: 'num num num'"""""))
-            puzzle.split()
+            puzzle.split(" ")
             print(puzzle)
 
 start_isak()
