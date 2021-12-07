@@ -1,17 +1,17 @@
 man ska gå in i en scp()
 
 
-Theo room:
+Theo room: room 3
     Puzzle in a theater 
     performance
     stealing
     and more
     
 
-Isak room:
+Isak room: room 1
     Gladiator arena with puzzle
 
-Dominik Idea:
+Dominik Idea: room 2
 
 #you come down a rope into the well, when you reach the bottom you are met with a small cave, near the bottom you find a shovel, you can squeeze through a gap in the wall to come to the bigger cave, you find remains of people, drawings and an old spear, picking up the spear starts a fight with some giant rats, once defeated you leave the well with a shovel and the old spear.
 abandoned well - shovel, spear
