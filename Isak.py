@@ -1,4 +1,5 @@
 from Game import *
+items = ("Sword of Smiting", "Fist")
 def start_isak():
     choise = input("""You enter contiusness and look at your suroundings.
           You see a path to the right and the left.
@@ -19,10 +20,23 @@ def start_isak():
                   | ||
                   
                   Dr.G: It seems this is the puzzle. Look you can input three numbers. I wonder what the answer is!
-                  You can input 3 numbers like this: 'num num num'"""""))
-            puzzle.split(" ")
-            print(puzzle)
+                  You can input 3 numbers without whitespaces:     """))
+            puzzle = puzzle.replace(" ", "")
+            if puzzle == "332":
+                  inventory.append(items(0))
+                  print(f"""You now have {inventory} in your inventory.""")
+                  print("""De.G: Now go to The Arena, you lucky person... you really culd have died!
+                        You decide to go to The Arena""")
+                  
+def arena():
+      choise = input(f"""You enter The Arena and see a locál looking like the Colosseum.
+                     Dr.G: Ah... yes! Finaly the trial. Lets see if you have what it takes...
+                     Several Rats with {rat[0]}HP and they do {rat[1]}dmg.""")
 
+weaponchoise():
+      choise = 
 start_isak()
-        
+arena()
+attack(rat, weaponchoise())
+
         
