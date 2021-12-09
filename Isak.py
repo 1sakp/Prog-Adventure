@@ -19,9 +19,9 @@ def start_isak():
                   | ||
                   
                   Dr.G: It seems this is the puzzle. Look you can input three numbers. I wonder what the answer is!
-                  You can input 3 numbers like this: 'num num num'"""""))
-            puzzle.split(" ")
-            print(puzzle)
+                  You can input 3 numbers like this: 'num num num':     """
+            if puzzle == "3 3 2" or puzzle == "332":
+                  inventory.append
 
 start_isak()
         
