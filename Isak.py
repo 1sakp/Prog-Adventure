@@ -31,8 +31,12 @@ def start_isak():
 def arena():
       choise = input(f"""You enter The Arena and see a locál looking like the Colosseum.
                      Dr.G: Ah... yes! Finaly the trial. Lets see if you have what it takes...
-                     Several {}""")
+                     Several Rats with {rat[0]}HP and they do {rat[1]}dmg.""")
 
+weaponchoise():
+      choise = 
 start_isak()
+arena()
+attack(rat, weaponchoise())
 
         
