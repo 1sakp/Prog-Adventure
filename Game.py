@@ -14,3 +14,6 @@ def attack(creature, weapon):
     creature_hp_new = creature_hp - weapon
     print(f"You did {weapon} dmg, the {creature} has {creature_hp_new}HP left!")
     print(f"The {creature} attacks you and does {creature_dmg} you have {player_hp}HP left!")
+
+def death():
+    
