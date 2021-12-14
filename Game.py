@@ -1,6 +1,6 @@
 items = ("Sword of Smiting", "Fist")
 inventory = []
-inventory.append(items(1))
+inventory.append(items[1])
 player_hp = 100
 player_dmg = ["Fists", 1, "Sword of Smiting"]
 rat = [10, 1]
