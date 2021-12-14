@@ -1,4 +1,4 @@
-items = ("Sword of Smiting", "Fist")
+items = ["Sword of Smiting", "Fist"]
 inventory = []
 inventory.append(items[1])
 player_hp = 100
