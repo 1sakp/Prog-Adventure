@@ -35,6 +35,8 @@ def start_isak():
                   print(f"""You now have {inventory} in your inventory.""")
                   print("""De.G: Now go to The Arena, you lucky person... you really culd have died!
                         You decide to go to The Arena""")
+            else:
+                  choice = input("Do you want to try again?")
                   
 def arena():
       choise = input(f"""You enter The Arena and see a locál looking like the Colosseum.
