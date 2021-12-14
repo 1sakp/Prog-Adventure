@@ -1,5 +1,13 @@
 from Game import *
 items = ("Sword of Smiting", "Fist")
+
+
+def weaponchoise():
+      choise = int(input(f"You have {inventory} in your inventory. Use numbers to chose a weapon... count from the start!"))
+      choise-=1
+      inventory[choise]
+      
+      
 def start_isak():
     choise = input("""You enter contiusness and look at your suroundings.
           You see a path to the right and the left.
@@ -30,11 +38,10 @@ def start_isak():
                   
 def arena():
       choise = input(f"""You enter The Arena and see a locál looking like the Colosseum.
-                     Dr.G: Ah... yes! Finaly the trial. Lets see if you have what it takes...
+                     Dr.G: Ah... yes! Finally the trial. Lets see if you have what it takes...
                      Several Rats with {rat[0]}HP and they do {rat[1]}dmg.""")
 
-weaponchoise():
-      choise = 
+
 start_isak()
 arena()
 attack(rat, weaponchoise())
