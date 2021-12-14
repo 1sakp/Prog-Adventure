@@ -46,4 +46,3 @@ start_isak()
 arena()
 attack(rat, weaponchoise())
 
-        
