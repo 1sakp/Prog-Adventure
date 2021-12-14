@@ -1,7 +1,7 @@
 from Game import *
 items = ("Sword of Smiting", "Fist")
 def start_isak():
-    choise = input("""You enter contiusness and look at your suroundings.
+    choise = input("""You enter contiousness and look at your suroundings.
           You see a path to the right and the left.
           Dr.G: Now go left and win the Trial of Champions, it won't be too hard.
           Where do you want to go:  """)
