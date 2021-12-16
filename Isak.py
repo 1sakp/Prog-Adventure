@@ -36,7 +36,6 @@ def arena():
                      Dr.G: Ah... yes! Finally the trial. Lets see if you have what it takes...
                      Several Rats with {rat[0]}HP and they do {rat[1]}dmg.""")
 
-attack(rat)
 start_isak()
 arena()
 attack(rat)
