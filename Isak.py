@@ -24,7 +24,7 @@ def start_isak():
                   You can input 3 numbers without whitespaces:     """))
             puzzle = puzzle.replace(" ", "")
             if puzzle == "332":
-                  inventory.append(items(0))
+                  inventory.append(items[0])
                   print(f"""You now have {inventory} in your inventory.""")
                   print("""De.G: Now go to The Arena, you lucky person... you really culd have died!
                         You decide to go to The Arena""")
@@ -35,7 +35,7 @@ def arena():
       choise = input(f"""You enter The Arena and see a locál looking like the Colosseum.
                      Dr.G: Ah... yes! Finally the trial. Lets see if you have what it takes...
                      Several Rats with {rat[0]}HP and they do {rat[1]}dmg.""")
-
+attack(skeleton)
 start_isak()
 arena()
 attack(rat)
