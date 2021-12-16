@@ -1,25 +1,28 @@
+#system designat av Isak
 items = ["sword of smiting", "fist"]
 inventory = []
 inventory.append(items[1])
 player_hp = 100
 
-#template för varelser, först i listan är HP sen DMG sen namn
+#template för varelser, först i listan är HP sen DMG sen namn: system designat av Isak
 rat = [10, 1, "Rat"]
 skeleton = [15, 2, "Skeleton"]
 troll = [30, 2, "Troll"]
 archer = [5, 4, "Archer"]
 
-#namnet är bara namnet på vapnet men numret efter är skada
+#namnet är bara namnet på vapnet men numret efter är skada  ####Isak
 weapon = {
     "fist": 1,
     "sword of smiting": 4 ,
     "iron sword": 2,
 }
 
+#Theo
 def dead(dead):
     print(f"Dr. G: The D class died while {dead}. ")
     exit()
 
+#Isak
 def inv():
     print(f"You open your bag and find:  {inventory}")
 

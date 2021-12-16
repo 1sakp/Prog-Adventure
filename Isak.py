@@ -29,14 +29,16 @@ def start_isak():
                   print("""De.G: Now go to The Arena, you lucky person... you really culd have died!
                         You decide to go to The Arena""")
             else:
-                  choice = input("Do you want to try again?")
-                  
+                  print("You lost bad luck... You die now!")
+                  dead("not listening to the advice he was given")
 def arena():
       choise = input(f"""You enter The Arena and see a locál looking like the Colosseum.
                      Dr.G: Ah... yes! Finally the trial. Lets see if you have what it takes...
                      Several Rats with {rat[0]}HP and they do {rat[1]}dmg.""")
-attack(skeleton)
+
 start_isak()
 arena()
+attack(rat)
+attack(rat)
 attack(rat)
 
