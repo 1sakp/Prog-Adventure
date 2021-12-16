@@ -18,12 +18,13 @@ weapon = {
 
 def dead(dead):
     print(f"Dr. G: The D class died while {dead}. ")
+    exit()
 
 def inv():
     print(f"You open your bag and find:  {inventory}")
 
 
-
+#ATTACK system: argumentet är bara en av varelsena. Allt detta skrevs av mig//MVH Isak
 def attack(creature):
     global player_hp
     creature_name = creature[2]
