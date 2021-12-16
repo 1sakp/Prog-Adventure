@@ -34,6 +34,15 @@ def Theo_game():
             dead = "trying to run awey from the entity"
             return dead
       
+      dance = lower(input("""
+                          Dr. G: DANCE!!!! DANCE FOR FUCK SAKE!!!!!
+                          IF TOU DON'T YOU WILL DIE: 
+                          
+                          """))
       
+      if dance == "dance":
+            print("""
+                  
+                  """)
       
 Theo_game()
