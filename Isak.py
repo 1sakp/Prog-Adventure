@@ -29,7 +29,7 @@ def start_isak():
                   print("""De.G: Now go to The Arena, you lucky person... you really culd have died!
                         You decide to go to The Arena""")
             else:
-                  print("You lost bad luck... You die now!")
+                  print("You lost, bad luck... You shall die now!")
                   dead("not listening to the advice he was given")
 def arena():
       choise = input(f"""You enter The Arena and see a locál looking like the Colosseum.
