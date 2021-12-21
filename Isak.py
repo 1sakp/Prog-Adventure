@@ -1,12 +1,5 @@
 from Game import *
 items = ("Sword of Smiting", "Fist")
-
-
-def weaponchoise():
-      choise = int(input(f"You have {inventory} in your inventory. Use numbers to chose a weapon... count from the start!"))
-      choise-=1
-      inventory[choise]
-      
       
 def start_isak():
     choise = input("""You enter contiousness and look at your suroundings.
@@ -31,20 +24,21 @@ def start_isak():
                   You can input 3 numbers without whitespaces:     """))
             puzzle = puzzle.replace(" ", "")
             if puzzle == "332":
-                  inventory.append(items(0))
+                  inventory.append(items[0])
                   print(f"""You now have {inventory} in your inventory.""")
                   print("""De.G: Now go to The Arena, you lucky person... you really culd have died!
                         You decide to go to The Arena""")
             else:
-                  choice = input("Do you want to try again?")
-                  
+                  print("You lost, bad luck... You shall die now!")
+                  dead("not listening to the advice he was given")
 def arena():
       choise = input(f"""You enter The Arena and see a locál looking like the Colosseum.
                      Dr.G: Ah... yes! Finally the trial. Lets see if you have what it takes...
                      Several Rats with {rat[0]}HP and they do {rat[1]}dmg.""")
 
-
 start_isak()
 arena()
-attack(rat, weaponchoise())
+attack(rat)
+attack(rat)
+attack(rat)
 

@@ -1,19 +1,51 @@
-items = ["Sword of Smiting", "Fist"]
+#system designat av Isak
+items = ["sword of smiting", "fist"]
 inventory = []
 inventory.append(items[1])
 player_hp = 100
-player_dmg = ["Fists", 1, "Sword of Smiting"]
-rat = [10, 1]
 
-def inv():
-    print(f"You open your bag and find:  {inventory}")
-    
-def attack(creature, weapon):
-    creature_hp = creature[0]
-    creature_dmg = creature[1]
-    creature_hp_new = creature_hp - weapon
-    print(f"You did {weapon} dmg, the {creature} has {creature_hp_new}HP left!")
-    print(f"The {creature} attacks you and does {creature_dmg} you have {player_hp}HP left!")
+#template för varelser, först i listan är HP sen DMG sen namn: system designat av Isak
+rat = [10, 1, "Rat"]
+skeleton = [15, 2, "Skeleton"]
+troll = [30, 2, "Troll"]
+archer = [5, 4, "Archer"]
 
+#namnet är bara namnet på vapnet men numret efter är skada  ####Isak
+weapon = {
+    "fist": 1,
+    "sword of smiting": 4 ,
+    "iron sword": 2,
+}
+
+#Theo
 def dead(dead):
     print(f"Dr. G: The D class died while {dead}. ")
+    exit()
+
+#Isak
+def inv():
+    print(f"You open your bag and find:  {inventory}")
+
+
+#ATTACK system: argumentet är bara en av varelsena. Allt detta skrevs av mig//MVH Isak
+def attack(creature):
+    global player_hp
+    creature_name = creature[2]
+    creature_hp = creature[0]
+    print(f"You are fighting a {creature_name}!")
+    choise = (input(f"You have {inventory} in your inventory. Chose a weapon: use only singular:    "))
+    choise = choise.lower()
+    weapon_local = weapon[choise]
+    creature_dmg = creature[1]
+    while True:
+        if player_hp >= 1:
+            if creature_hp >= 1:
+                player_hp = player_hp - creature_dmg
+                creature_hp = creature_hp - weapon_local
+                print(f"You did {weapon[choise]} dmg, the {creature_name} has {creature_hp}HP left!")
+                print(f"The {creature_name} attacks you and does {creature_dmg} you have {player_hp}HP left!")
+            else:
+                print("You won!")
+                return()
+        else:
+            dead(f"fighting a {creature_name}")
