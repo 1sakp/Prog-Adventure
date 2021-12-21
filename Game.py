@@ -33,7 +33,7 @@ def attack(creature):
     creature_name = creature[2]
     creature_hp = creature[0]
     print(f"You are fighting a {creature_name}!")
-    choise = (input(f"You have {inventory} in your inventory. Chose a weapon: use only singular:    "))
+    choise = (input(f"You have {inventory} in your inventory. (Chose a weapon: use only singular):    "))
     choise = choise.lower()
     weapon_local = weapon[choise]
     creature_dmg = creature[1]
