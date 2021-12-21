@@ -42,7 +42,7 @@ def Theo_game():
       
       if dance == "dance":
             print("""
-                  
+                  You start doing the macarena. 
                   """)
       
 Theo_game()
