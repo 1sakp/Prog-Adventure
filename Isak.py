@@ -60,7 +60,7 @@ def start_isak_2():
             arena()
       
 def start_isak():
-    choise = input("""You enter contiousness and look at your suroundings.
+      choise = input("""You enter contiousness and look at your suroundings.
                       Dr.G: Now go left and win the Trial of Champions, it won't be too hard.
                       You: The what?!
                       DR.G: Don't worry just follow my instructions...
@@ -68,15 +68,15 @@ def start_isak():
                   The left path seems to lead to a ancient arena.
                   The right path leads to some sort of shrine.
                   Where do you want to go:  """)
-    if "left" in choise.lower():
+      if "left" in choise.lower():
         print("""You enter what looks like an arena like that from ancient greece.
               Dr.G: You should see a arena now, do you see it?""")
         arena()
-    if "right" in choise.lower():
-        choise = input("""Dr.G: NO! Don't go there. We don't know what will happen, you could DIE! Now turn back and continue on course.
+      if "right" in choise.lower():
+            choise = input("""Dr.G: NO! Don't go there. We don't know what will happen, you could DIE! Now turn back and continue on course.
                        Do you want to continue?:    """)
-        if "yes" in choise.lower():
-            puzzle = str(input("""You find a sword laying on a table and a tablet. You read the tablet:
+            if "yes" in choise.lower():
+                  puzzle = str(input("""You find a sword laying on a table and a tablet. You read the tablet:
                   "To gain power you must be smart, solve this puzzle and gain the 'Sword of Smiting':
                   
                   || |
