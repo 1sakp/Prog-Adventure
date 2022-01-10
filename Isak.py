@@ -1,4 +1,31 @@
 from Game import *
+import subprocess as sub
+
+def arena_door_right():
+      global player_hp
+      print(f"You take 5 points of damage as you step on some spikes. This makes you back out of the room...")
+      player_hp -= 5
+      arena_corridor()
+
+def arena_door_left():
+      print(f"You enter the room, to your suprise there is no furiture in this room. You decide to walk out again...")
+      arena_corridor()
+      
+def arena_door_middle():
+      choise = input(f"You enter what apears to be a room with a book case and nothing else...")
+      if "take" or "grab" or "book" in choise.lower():
+            exec(open("Theo.py").read())
+      if "exit" or "leave" in choise.lower():
+            arena_corridor()
+
+def arena_corridor():
+      choise = input("""You enter a corridor with 3 rooms, one on the left, one on the right and one in the middle:  what door do you wish to enter? :   """)
+      if "right" in choise.lower():
+            arena_door_right()
+      if "left" in choise.lower():
+            arena_door_left()
+      if "middle" or "center" in choise.lower():
+            arena_door_middle()
 
 def arena():
       global player_hp
@@ -15,10 +42,12 @@ def arena():
             player_hp += 50
             if player_hp > 100:
                   player_hp = 100
-      if "sword" or "upgrade" in choise.lower():
+            print(f"You HP is now {player_hp}...")
+      elif "sword" or "upgrade" in choise.lower():
             weapon["sword of smiting"] += 2
       attack(rat)
-            
+      print("You leave the arena and go thrugh a door.")
+      arena_corridor()
       
 def start_isak_2():
       choise = input("""You see a path to the right and the left.
@@ -32,9 +61,13 @@ def start_isak_2():
       
 def start_isak():
     choise = input("""You enter contiousness and look at your suroundings.
-          You see a path to the right and the left.
-          Dr.G: Now go left and win the Trial of Champions, it won't be too hard.
-          Where do you want to go:  """)
+                      Dr.G: Now go left and win the Trial of Champions, it won't be too hard.
+                      You: The what?!
+                      DR.G: Don't worry just follow my instructions...
+                  You see a path to the right and the left.
+                  The left path seems to lead to a ancient arena.
+                  The right path leads to some sort of shrine.
+                  Where do you want to go:  """)
     if "left" in choise.lower():
         print("""You enter what looks like an arena like that from ancient greece.
               Dr.G: You should see a arena now, do you see it?""")
@@ -64,6 +97,23 @@ def start_isak():
                   print("You lost, bad luck... You shall die now!")
                   dead("not listening to the advice he was given")
 
-
+print("""You wake up on a plain hospital bed in a unfurnished room...
+         You don't remember annything... you where in prisson but now... now...
+         A voice interuppts your thoughts... 
+         
+         Unkown: D-Class... D-Class wake up we need to experiment...
+         You: What do you mean... where am I?
+         Unknown: Ah yes... I see the sedetive was a bit to strong, interesting... annyway I'm Dr.G and you are in the testing area for SCP-6969420.
+         You: What!
+         Dr.G: No time to explain. Look in to the circular object on your right!
+         
+         What you previusly had thought to be an unfurnished room now has somthing looking like a mirror in it.
+         
+         Dr.G: Hurry up we havent got all day!
+         
+         You nevusly look in to the mirror like object, expecting there to be something strange about it...
+         but before you notice annything unusual you suddenly black out!
+         
+         """)
 
 start_isak()

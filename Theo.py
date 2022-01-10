@@ -1,4 +1,4 @@
-#from Game import *
+from Game import *
 
 def Theo_game():
       print("""
