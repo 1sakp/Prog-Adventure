@@ -1,5 +1,4 @@
 from Game import *
-import subprocess as sub
 
 def arena_door_right():
       global player_hp
@@ -12,55 +11,55 @@ def arena_door_left():
       arena_corridor()
       
 def arena_door_middle():
-      choise = input(f"You enter what apears to be a room with a book case and nothing else...")
-      if "take" or "grab" or "book" in choise.lower():
+      choice = input(f"You enter what apears to be a room with a book case and nothing else...")
+      if "take" or "grab" or "book" in choice.lower():
             exec(open("Theo.py").read())
-      if "exit" or "leave" in choise.lower():
+      if "exit" or "leave" in choice.lower():
             arena_corridor()
 
 def arena_corridor():
-      choise = input("""You enter a corridor with 3 rooms, one on the left, one on the right and one in the middle:  what door do you wish to enter? :   """)
-      if "right" in choise.lower():
+      choice = input("""You enter a corridor with 3 rooms, one on the left, one on the right and one in the middle:  what door do you wish to enter? :   """)
+      if "right" in choice.lower():
             arena_door_right()
-      if "left" in choise.lower():
+      if "left" in choice.lower():
             arena_door_left()
-      if "middle" or "center" in choise.lower():
+      if "middle" or "center" in choice.lower():
             arena_door_middle()
 
 def arena():
       global player_hp
       global weapon
-      choise = input(f"""You enter The Arena and see a locál looking like the Colosseum.
+      choice = input(f"""You enter The arena and see an structure looking like the Colosseum.
                      Dr.G: Ah... yes! Finally the trial. Lets see if you have what it takes...
                      Several Rats with {rat[0]}HP and they do {rat[1]}dmg.""")
       attack(rat)
       attack(rat)
       attack(rat)
       attack(archer)
-      choise = input(f"""Dr.G: You can now upgrade your sword or drink a health-potion: choose wisely:      """)
-      if "drink" or "potion" or "health" in choise.lower():
+      choice = input(f"""Dr.G: You can now upgrade your sword or drink a health-potion: choose wisely:      """)
+      if "drink" or "potion" or "health" in choice.lower():
             player_hp += 50
             if player_hp > 100:
                   player_hp = 100
             print(f"You HP is now {player_hp}...")
-      elif "sword" or "upgrade" in choise.lower():
+      elif "sword" or "upgrade" in choice.lower():
             weapon["sword of smiting"] += 2
       attack(rat)
       print("You leave the arena and go thrugh a door.")
       arena_corridor()
       
 def start_isak_2():
-      choise = input("""You see a path to the right and the left.
+      choice = input("""You see a path to the right and the left.
                         Dr.G: Now go left and win the Trial of Champions, it won't be too hard.
                         Where do you want to go:  """)
-      if "right" in choise.lower():
+      if "right" in choice.lower():
             print("""You have already been there!""")
             start_isak_2()
-      if "left" in choise.lower():
+      if "left" in choice.lower():
             arena()
       
 def start_isak():
-      choise = input("""You enter contiousness and look at your suroundings.
+      choice = input("""You enter consciousness and look at your suroundings.
                       Dr.G: Now go left and win the Trial of Champions, it won't be too hard.
                       You: The what?!
                       DR.G: Don't worry just follow my instructions...
@@ -68,14 +67,14 @@ def start_isak():
                   The left path seems to lead to a ancient arena.
                   The right path leads to some sort of shrine.
                   Where do you want to go:  """)
-      if "left" in choise.lower():
-        print("""You enter what looks like an arena like that from ancient greece.
+      if "left" in choice.lower():
+        print("""You enter what looks like an arena, like that from ancient greece.
               Dr.G: You should see a arena now, do you see it?""")
         arena()
-      if "right" in choise.lower():
-            choise = input("""Dr.G: NO! Don't go there. We don't know what will happen, you could DIE! Now turn back and continue on course.
+      if "right" in choice.lower():
+            choice = input("""Dr.G: NO! Don't go there. We don't know what will happen, you could DIE! Now turn back and continue on course.
                        Do you want to continue?:    """)
-            if "yes" in choise.lower():
+            if "yes" in choice.lower():
                   puzzle = str(input("""You find a sword laying on a table and a tablet. You read the tablet:
                   "To gain power you must be smart, solve this puzzle and gain the 'Sword of Smiting':
                   
