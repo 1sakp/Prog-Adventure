@@ -11,12 +11,14 @@ rat = [10, 1, "Rat"]
 skeleton = [15, 2, "Skeleton"]
 troll = [30, 2, "Troll"]
 archer = [5, 4, "Archer"]
+mirror_being = [75, 7, "Your Reflection"]
 
 #stringen är bara namnet på vapnet. numret efter är skadan vapnet gör  ####Isak
 weapon = {
     "fist": 1,
-    "sword of smiting": 4 ,
-    "iron sword": 2,
+    "sword of smiting": 5,
+    "iron sword": 3,
+    "steel shovel": 3,
 }
 
 #Theo
