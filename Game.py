@@ -72,5 +72,6 @@ def attack(creature):
             else:
                 dead(f"fighting a {creature_name}")  
 
+#START
 #Såhär kör man en annan fil... MVH:Isak
 exec(open("Isak.py").read())
