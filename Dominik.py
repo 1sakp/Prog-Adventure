@@ -176,9 +176,9 @@ Will you try to knock the door?""")
 choice_window = input("""You look through the window and see a dark room, the room seems empty. 
 Dr.G if you go into the room you are sure to have fun, hehe...
 Do you enter or do you leave?""")
-    if "leave" or "back" in choice_window:
+if "leave" or "back" in choice_window:
         print()
-    if "enter" or "go in" in choice_window:
+if "enter" or "go in" in choice_window:
         print()
 
 
