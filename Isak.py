@@ -13,7 +13,7 @@ def arena_door_left():
 def arena_door_middle():
       choice = input(f"You enter what apears to be a room with a book case and nothing else...")
       if "take" or "grab" or "book" in choice.lower():
-            exec(open("Theo.py").read())
+            exec(open("Dominik.py").read())
       if "exit" or "leave" in choice.lower():
             arena_corridor()
 
