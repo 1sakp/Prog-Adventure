@@ -1,5 +1,8 @@
+
+#importer
 from Game import *
 
+#definitioner
 def arena_door_right():
       global player_hp
       print(f"You take 5 points of damage as you step on some spikes. This makes you back out of the room...")
@@ -13,8 +16,9 @@ def arena_door_left():
 def arena_door_middle():
       choice = input(f"You enter what apears to be a room with a book case and nothing else...")
       if "take" or "grab" or "book" in choice.lower():
-            exec(open("Theo.py").read())
-      if "exit" or "leave" in choice.lower():
+            print("""You wake up in the hospital bed again""")
+            exec(open("Dominik.py").read())
+      elif "exit" or "leave" in choice.lower():
             arena_corridor()
 
 def arena_corridor():
@@ -88,14 +92,16 @@ def start_isak():
             if puzzle == "332":
                   inventory.append(items[0])
                   print(f"""You now have {inventory} in your inventory.""")
-                  print("""De.G: Now go to The Arena, you lucky person... you really culd have died!
-                        You decide to go to back to where you woke up.""")
+                  print("""De.G: Now go to The Arena, you lucky person... you really could have died!
+                           You decide to go to back to where you woke up.""")
                   start_isak_2()
                   
             else:
                   print("You lost, bad luck... You shall die now!")
                   dead("not listening to the advice he was given")
 
+
+#Programmet
 print("""You wake up on a plain hospital bed in a unfurnished room...
          You don't remember annything... you where in prisson but now... now...
          A voice interuppts your thoughts... 
