@@ -1,3 +1,4 @@
+#variabler
 last = "placeholder"
 
 #system designat av Isak
@@ -13,7 +14,7 @@ troll = [30, 2, "Troll"]
 archer = [5, 4, "Archer"]
 mirror_being = [75, 7, "Your Reflection"]
 
-#stringen är bara namnet på vapnet. numret efter är skadan vapnet gör  ####Isak
+#stringen är bara namnet på vapnet. Numret efter är skadan vapnet gör  ####Isak
 weapon = {
     "fist": 1,
     "sword of smiting": 5,

@@ -1,5 +1,8 @@
+
+#importer
 from Game import *
 
+#definitioner
 def arena_door_right():
       global player_hp
       print(f"You take 5 points of damage as you step on some spikes. This makes you back out of the room...")
@@ -96,6 +99,8 @@ def start_isak():
                   print("You lost, bad luck... You shall die now!")
                   dead("not listening to the advice he was given")
 
+
+#Programmet
 print("""You wake up on a plain hospital bed in a unfurnished room...
          You don't remember annything... you where in prisson but now... now...
          A voice interuppts your thoughts... 
