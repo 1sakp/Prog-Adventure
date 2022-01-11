@@ -57,7 +57,7 @@ standing on stage and being eaten.
             """
             return dead
             
-      Print("""
+      print("""
 You finnich dancing and start heading backstage. 
 You see three doors (One to the left, one in the middle and
 one to the right), a mirror, a plant and the exit. 
