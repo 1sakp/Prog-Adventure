@@ -91,8 +91,8 @@ def start_isak():
             if puzzle == "332":
                   inventory.append(items[0])
                   print(f"""You now have {inventory} in your inventory.""")
-                  print("""De.G: Now go to The Arena, you lucky person... you really culd have died!
-                        You decide to go to back to where you woke up.""")
+                  print("""De.G: Now go to The Arena, you lucky person... you really could have died!
+                           You decide to go to back to where you woke up.""")
                   start_isak_2()
                   
             else:
