@@ -4,6 +4,7 @@ def start():
     print("""Dr.G: Welcome to SCP-6969420-2 D-Class-69420. You have done well completing the 1st stage.
 I am very happy with your progress. You have already beaten 40% of our other D-Classes. 
 I hope you continue to suprise us with your intellect. Complete this challenge to get to the next level, and reach your reward, of freedom.""")
+    starting_point()
 
 def starting_point():
     choice_1 = input("""You look around to orientate yourself, you seem to be standing in a courtyard, to your right is a graveyard.
