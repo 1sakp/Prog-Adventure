@@ -35,7 +35,7 @@ You enter a corridor with 3 rooms, one on the left, one on the right and one in 
 def arena():
       global player_hp
       global weapon
-      choice = input(f"""
+      print(f"""
 You enter The arena and see an structure looking like the Colosseum.
 Dr.G: Ah... yes! Finally the trial. Lets see if you have what it takes...
 Several Rats with {rat[0]}HP and they do {rat[1]}dmg.""")
