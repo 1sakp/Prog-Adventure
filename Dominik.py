@@ -4,7 +4,9 @@ def start():
     print("""Dr.G: Welcome to SCP-6969420-2 D-Class-69420. You have done well completing the 1st stage.
 I am very happy with your progress. You have already beaten 40% of our other D-Classes. 
 I hope you continue to suprise us with your intellect. Complete this challenge to get to the next level, and reach your reward, of freedom.""")
+    starting_point()
 
+def starting_point():
     choice_1 = input("""You look around to orientate yourself, you seem to be standing in a courtyard, to your right is a graveyard.
 To your left you see an abandoned well, it is mossy and seems so old it is ready to fall apart.
 Behind you is a giant entrance gate, the whole area is surrounded by a dark, eerie, forest and a thick fog obscuring your vision.
@@ -20,31 +22,11 @@ In front of you is a giant mansion, it looks very old, it is covered in moss, so
     if "window" in choice_1:
         print()
 
-
-
-
-
-
-#Gate:
 def gate():
     print("""You go up to the gate, it is rusty but still stands sturdy. 
 The path beyond leads into an engulfing darkness. 
 You leave after realising there is not escape.""")
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-#Graveyard:
 def graveyard():
     choice_graveyard = input("""You enter the graveyard. 
 The forg here is more dense than in the other areas. 
@@ -81,7 +63,6 @@ def inside_shed():
     print("""Inside the shed is firewood and some other useless things. 
 You find a shovel and take it with you.""")
 
-
 #if i dig without shovel in inventory it wont dig, but if i have it will... and if i dig it up i get reward in inv. i cba typing now so isak and theo help me lul
 def tree():
     choice_tree = input("""You go up to the tree. 
@@ -100,19 +81,6 @@ def digging_failed():
     print("""You dig but it is not going too well, the ground is too hard. 
 You need something to dig with...""")
 
-
-
-
-
-
-
-
-
-
-
-
-
-#Well:
 def well():
     choice_well = input("""The well looks ready to fall apart, the rope seems well attacked and should hold your weight. 
 Do you want to go down the rope?""")
@@ -131,7 +99,7 @@ The hole leads into a large cave, it seems to be located underneath the mansion.
 #need key to open
 def dungeon():
     print("""The hole leads to a cell in a dungeon.
-    The door is locked, you can not open it from the inside, but if you had a key you could open the door...""")
+The door is locked, you can not open it from the inside, but if you had a key you could open the door...""")
 
 def mansion_inside():
     choice_mansion = input("""It is quiet inside the mansion, there is dust everywhere.
@@ -154,11 +122,6 @@ You come out of the mirror bearing {weapon},
 
 """)
 
-
-
-
-
-#Mansion:
 #Get attacked by something
 def window_room():
     print("""The room yoou entered is full of dust. No one has been here in a while.
@@ -177,9 +140,9 @@ choice_window = input("""You look through the window and see a dark room, the ro
 Dr.G if you go into the room you are sure to have fun, hehe...
 Do you enter or do you leave?""")
 if "leave" or "back" in choice_window:
-        print()
+        starting_point()
 if "enter" or "go in" in choice_window:
-        print()
+        window_room()
 
 
 
