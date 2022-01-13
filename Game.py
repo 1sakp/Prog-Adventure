@@ -32,14 +32,14 @@ def inv():
     print(f"You open your bag and find:  {inventory}")
 
 
-#ATTACK system: argumentet är bara en av varelsena. Allt detta skrevs av mig//MVH Isak
+#Isaks AMAZING ATTACK system: argumentet är bara en av varelsena.   //MVH Isak
 def attack(creature):
     global player_hp
     global last
     creature_name = creature[2]
     creature_hp = creature[0]
     print(f"You are fighting a {creature_name}!")
-    choice = (input(f"You have {inventory} in your inventory. (Chose a weapon: use only singular or use 'last' to use last weapon):    "))
+    choice = (input(f"You have {inventory} in your inventory. (Chose a weapon: use only singular or use 'last' to use last weapon used):    "))
     if "last" in choice.lower():
         weapon_local = weapon[last]
         creature_dmg = creature[1]
