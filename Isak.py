@@ -2,7 +2,7 @@
 #importer
 from Game import *
 
-#definitioner
+#definitioner/olika platser och rum
 def arena_door_right():
       global player_hp
       print(f"You take 5 points of damage as you step on some spikes. This makes you back out of the room...")
