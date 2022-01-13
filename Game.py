@@ -22,6 +22,7 @@ weapon = {
     "sword of smiting": 5,
     "iron sword": 3,
     "steel shovel": 3,
+    "axe": 4,
 }
 
 #Theo
