@@ -13,6 +13,8 @@ skeleton = [15, 2, "Skeleton"]
 troll = [30, 2, "Troll"]
 archer = [5, 4, "Archer"]
 mirror_being = [75, 7, "Your Reflection"]
+rotting_corpse = [20, 3, "Rotting Corpse"]
+spectre = [20, 3, "Spectre"]
 
 #stringen är bara namnet på vapnet. Numret efter är skadan vapnet gör  ####Isak
 weapon = {
