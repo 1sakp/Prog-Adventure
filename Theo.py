@@ -52,9 +52,15 @@ def The_room_of_many_rooms_and_other_stuff_it_also_have_an_exit_but_you_need_a_k
       
       while out == 1:
             print("""
-
+When you are done dancing you enter backstage. 
+There you see 3 door (one to the left, one in the middle 
+and one to the right), a mirror on the wall, a plant
+in the corner. 
                   """)
-      
+            
+            choice = input("""
+
+                           """)      
       
             
 Theo_game_intro()
