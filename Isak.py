@@ -45,11 +45,7 @@ Several Rats with {rat[0]}HP and they do {rat[1]}dmg.""")
       attack(archer)
       choice = input(f"""
 Dr.G: You can now upgrade your sword (if you have one) or drink a health-potion: choose wisely:      """)
-<<<<<<< HEAD
       if "drink" or "potion" or "health-potion" in choice.lower():
-=======
-      if "drink" or "use" in choice.lower():
->>>>>>> 7b94b8ae1790202e63f83a981fbfb196ecac177e
             player_hp += 50
             if player_hp > 100:
                   player_hp = 100
