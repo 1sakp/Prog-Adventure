@@ -132,5 +132,6 @@ You nevusly look in to the mirror like object, expecting there to be something s
 but before you notice annything unusual you suddenly black out!
       
 """)
+
 arena()
 start_isak()
