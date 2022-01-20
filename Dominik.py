@@ -1,4 +1,4 @@
-from Game import *
+import Game as game
 
 def starting_point():
     choice_1 = input("""You look around to orientate yourself, you seem to be standing in a courtyard, to your right is a graveyard.
@@ -72,7 +72,7 @@ def dug_up():
     print("""You find an axe, it is probably the one the firewood had been cut with.
 It seems in good condition, it was buried not too long ago.
 You leave the tree with the axe and return to the graveyard.""")
-    inventory.append
+    game.inventory.append
     graveyard()
 
 #need to finish this shite
@@ -93,22 +93,22 @@ def well_bottom():
 You see a green light at the end of the tunnel. 
 The green light is coming from some weird flowers you have never seen before, it would be safest not to touch them. 
 The hole leads into a large cave, it seems to be located underneath the mansion.""")
-    attack(troll)
-    attack(troll)
-    attack(troll)
-    if player_hp <= 0:
-        print(f"You have died in battle against a {spectre}")
-        dead()
-    elif player_hp >= 1:
+    game.attack(game.troll)
+    game.attack(game.troll)
+    game.attack(game.troll)
+    if game.player_hp <= 0:
+        print(f"You have died in battle against a {game.spectre}")
+        game.dead()
+    elif game.player_hp >= 1:
         print("You win by the skin of your teeth.")
         dungeon()
-    if player_hp >= 25:
+    if game.player_hp >= 25:
         print("You are victorious with grave injuries.")
         dungeon()
-    if player_hp >= 50:
+    if game.player_hp >= 50:
         print("You win with minor inconvinences.")
         dungeon()
-    if player_hp >= 75:
+    if game.player_hp >= 75:
         print("You call this a challenge? Hah.")
         dungeon()
 
@@ -137,7 +137,7 @@ Your reflection copies your movements perfectly... untill it doesn't.
 Mirror: 
 
 Mirror: So you have chosen death. It shall be as you wish it. 
-You come out of the mirror bearing {weapon}, 
+You come out of the mirror bearing {game.weapon}, 
 
 
 
@@ -175,18 +175,18 @@ def window_room():
     print("""The room yoou entered is full of dust. No one has been here in a while.
 You go up to a desk and examine some documents.
 The shadows around you start moving, you take up battle stance.""")
-    attack(spectre)
-    attack(spectre)
-    if player_hp <= 0:
-        print(f"You have died in battle against a {spectre}")
-        dead()
-    elif player_hp >= 1:
+    game.attack(game.spectre)
+    game.attack(game.spectre)
+    if game.player_hp <= 0:
+        print(f"You have died in battle against a {game.spectre}")
+        game.dead()
+    elif game.player_hp >= 1:
         print("You win by the skin of your teeth.")
-    if player_hp >= 25:
+    if game.player_hp >= 25:
         print("You are victorious with grave injuries.")
-    if player_hp >= 50:
+    if game.player_hp >= 50:
         print("You win with minor inconvinences.")
-    if player_hp >= 75:
+    if game.player_hp >= 75:
         print("You call this a challenge? Hah.")
 
 #if you knock too much you get killed lmao, 
