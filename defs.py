@@ -270,7 +270,9 @@ def door():
     choice_door = input("""The mansion door is giant, you try to open the door but it is closed and will not budge.
 Will you try to knock the door?""")
     if "yes" or "knock" in choice_door.lower():
-        print()
+        knock_count = 0
+        while knock_count < 3:
+            
     if "no" or "leave" in choice_door.lower():
         starting_point()
 
