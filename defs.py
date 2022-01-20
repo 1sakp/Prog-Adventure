@@ -83,13 +83,13 @@ Behind you is a giant entrance gate, the whole area is surrounded by a dark, eer
 In front of you is a giant mansion, it looks very old, it is covered in moss, some of the windows are broken.""")
     if "left" in choice_1.lower() or "well" in choice_1.lower(): 
         well()
-    if "right" in choice_1.lower() or "graveyard" in choice_1.lower():
+    elif "right" in choice_1.lower() or "graveyard" in choice_1.lower():
         graveyard()
-    if "behind" in choice_1.lower() or "gate" in choice_1.lower():
+    elif "behind" in choice_1.lower() or "gate" in choice_1.lower():
         gate()
-    if "mansion" in choice_1.lower():
+    elif "mansion" in choice_1.lower():
         door()
-    if "window" in choice_1.lower():
+    elif "window" in choice_1.lower():
         window()
 
 def gate():
@@ -105,20 +105,20 @@ You see a tree a shed and a few graves.
 Where will you go?""")
     if "tree" in choice_graveyard.lower():
         tree()
-    if "shed" in choice_graveyard.lower():
+    elif "shed" in choice_graveyard.lower():
         shed()
-    if "grave" or "graves" in choice_graveyard.lower():
+    elif "grave" or "graves" in choice_graveyard.lower():
         graves()
 
 def graves():
     choice_graves = int(input("""There are four graves which do you want to examine?"""))
     if 1 in choice_graves:
         print()
-    if 2 in choice_graves:
+    elif 2 in choice_graves:
         print()
-    if 3 in choice_graves:
+    elif 3 in choice_graves:
         print()
-    if 4 in choice_graves:
+    elif 4 in choice_graves:
         print()
 
 def shed():
@@ -126,7 +126,7 @@ def shed():
 Do you go in?""")
     if "yes" or "enter" in choice_shed.lower():
         inside_shed()
-    if "no" or "leave" in choice_shed.lower():
+    elif "no" or "leave" in choice_shed.lower():
         graveyard()
 
 #you figt something here before you leave the shed. also shovel is added as an item in inventory 
@@ -141,7 +141,7 @@ The tree itself is not suspicious, although there is a recenty dug up path next 
 Do you want dig?""")
     if "dig" or "yes" in choice_tree.lower():
         print()
-    if "no" or "leave" in choice_tree.lower():
+    elif "no" or "leave" in choice_tree.lower():
         print()
 
 def dug_up():
@@ -161,7 +161,7 @@ def well():
 Do you want to go down the rope?""")
     if "yes" or "down" in choice_well.lower():
         well_bottom()
-    if "no" or "leave" in choice_well.lower():
+    elif "no" or "leave" in choice_well.lower():
         starting_point()
 
 def well_bottom():
@@ -178,13 +178,13 @@ The hole leads into a large cave, it seems to be located underneath the mansion.
     elif player_hp >= 1:
         print("You win by the skin of your teeth.")
         dungeon()
-    if player_hp >= 25:
+    elif player_hp >= 25:
         print("You are victorious with grave injuries.")
         dungeon()
-    if player_hp >= 50:
+    elif player_hp >= 50:
         print("You win with minor inconvinences.")
         dungeon()
-    if player_hp >= 75:
+    elif player_hp >= 75:
         print("You call this a challenge? Hah.")
         dungeon()
 
@@ -200,7 +200,7 @@ You hear some noises from the attic.
 Do you go up to the attic?""")
     if "yes" or "attic" in choice_mansion.lower():
         attic()
-    if "no" or "leave" in choice_mansion.lower():
+    elif "no" or "leave" in choice_mansion.lower():
         print("""Dr.G: You've come this far, this far, there is no turing back now...
     You look back to where the door had been and see it is gone, you go up to the attic.""")
         attic()
@@ -258,30 +258,35 @@ The shadows around you start moving, you take up battle stance.""")
         dead()
     elif player_hp >= 1:
         print("You win by the skin of your teeth.")
-    if player_hp >= 25:
+    elif player_hp >= 25:
         print("You are victorious with grave injuries.")
-    if player_hp >= 50:
+    elif player_hp >= 50:
         print("You win with minor inconvinences.")
-    if player_hp >= 75:
+    elif player_hp >= 75:
         print("You call this a challenge? Hah.")
 
 #if you knock too much you get killed lmao, 
 def door():
     choice_door = input("""The mansion door is giant, you try to open the door but it is closed and will not budge.
 Will you try to knock the door?""")
-    if "yes" or "knock" in choice_door.lower():
-        knock_count = 0
-        while knock_count < 3:
-            
-    if "no" or "leave" in choice_door.lower():
-        starting_point()
+    knock_count = 0
+    while knock_count <= 3:
+        if knock_count == 3:
+            dead("for being too curious.")
+        if "yes" or "knock" in choice_door.lower():
+            choice_knock = ("Do you knock again?")
+            if "knock" in choice_knock.lower() or "yes" in choice_knock.lower():
+                knock_count = knock_count + 1 
+        elif "no" or "leave" in choice_door.lower():
+            starting_point()
+
 
 def window():
     choice_window = input("""You look through the window and see a dark room, the room seems empty. 
 Do you enter or do you leave?""")
     if "leave" or "back" in choice_window.lower():
         starting_point()
-    if "enter" or "go in" in choice_window.lower():
+    elif "enter" or "go in" in choice_window.lower():
         window_room()
 
 def start_dominik():
