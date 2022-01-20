@@ -1,4 +1,4 @@
 #START
-import defs as defe
+import defs as defs
 
-defe.start_isak()
+defs.start_isak()
