@@ -5,7 +5,7 @@ def starting_point():
 To your left you see an abandoned well, it is mossy and seems so old it is ready to fall apart.
 Behind you is a giant entrance gate, the whole area is surrounded by a dark, eerie, forest and a thick fog obscuring your vision.
 In front of you is a giant mansion, it looks very old, it is covered in moss, some of the windows are broken.""")
-    if "left" or "well" in choice_1.lower()(): 
+    if "left" or "well" in choice_1.lower(): 
         well()
     if "right" or "graveyard" in choice_1.lower():
         graveyard()
@@ -36,13 +36,13 @@ Where will you go?""")
 
 def graves():
     choice_graves = int(input("""There are four graves which do you want to examine?"""))
-    if int(1) in choice_graves:
+    if 1 in choice_graves:
         print()
-    if int(2) in choice_graves:
+    if 2 in choice_graves:
         print()
-    if int(3) in choice_graves:
+    if 3 in choice_graves:
         print()
-    if int(4) in choice_graves:
+    if 4 in choice_graves:
         print()
 
 def shed():

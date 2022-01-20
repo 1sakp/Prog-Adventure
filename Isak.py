@@ -43,16 +43,12 @@ Several Rats with {rat[0]}HP and they do {rat[1]}dmg.""")
       attack(rat)
       attack(rat)
       attack(archer)
-      choice = input(f"""
-Dr.G: You can now upgrade your sword (if you have one) or drink a health-potion: choose wisely:      """)
-      if "drink" or "potion" or "health-potion" in choice.lower():
-            player_hp += 50
-            if player_hp > 100:
-                  player_hp = 100
-            print(f"You HP is now {player_hp}...")
-      elif "sword" or "upgrade" in choice.lower():
-            weapon["sword of smiting"] += 2
-            print("You see your sword glow bright...")
+      print("""
+Dr.G: Now drink a health-potion      """)
+      player_hp += 50
+      if player_hp > 100:
+            player_hp = 100
+      print(f"You HP is now {player_hp}...")
       attack(rat)
       print("You leave the arena and go thrugh a door.")
       arena_corridor()
@@ -132,5 +128,5 @@ You nevusly look in to the mirror like object, expecting there to be something s
 but before you notice annything unusual you suddenly black out!
       
 """)
-arena()
+
 start_isak()
