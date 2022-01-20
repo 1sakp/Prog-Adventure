@@ -244,7 +244,7 @@ Now you will be punished.
 
 """)
     print("You enter the mirror and find yourself back in the same dreadful hospital room before falling unconscious.")
-    Theo_game_intro()
+
 
 #Get attacked by something if loose go back to start no text either, if win leave and read text 
 def window_room():
@@ -310,11 +310,11 @@ def arena_door_left():
       
 def arena_door_middle():
       choice = input(f"You enter what apears to be a room with a book case and nothing else...")
-      if "take" or "grab" or "book" in choice.lower():
+      if "take" in choice.lower() or "grab" in choice.lower() or "book" in choice.lower():
             print("""
 You wake up in the hospital bed again""")
-            start_dominik()
-      elif "exit" or "leave" in choice.lower():
+            Theo_game_intro()
+      elif "exit" in choice.lower() or "leave" in choice.lower():
             arena_corridor()
 
 def arena_corridor():
@@ -324,7 +324,7 @@ You enter a corridor with 3 rooms, one on the left, one on the right and one in 
             arena_door_right()
       if "left" in choice.lower():
             arena_door_left()
-      if "middle" or "center" in choice.lower():
+      if "middle" in choice.lower() or "center" in choice.lower():
             arena_door_middle()
 
 def arena():
