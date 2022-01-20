@@ -1,15 +1,90 @@
-from Game import *
+#variabler
+last = "placeholder"
+
+#system designat av Isak
+items = ["sword of smiting", "fist"]
+inventory = []
+inventory.append(items[1])
+player_hp = 100
+
+#template för varelser, först i listan är HP sen DMG sen namn: system designat av Isak
+rat = [10, 1, "Rat"]
+skeleton = [15, 2, "Skeleton"]
+troll = [30, 2, "Troll"]
+archer = [5, 4, "Archer"]
+mirror_being = [75, 7, "Your Reflection"]
+rotting_corpse = [20, 3, "Rotting Corpse"]
+spectre = [20, 3, "Spectre"]
+
+#stringen är bara namnet på vapnet. Numret efter är skadan vapnet gör  ####Isak
+weapon = {
+    "fist": 1,
+    "sword of smiting": 5,
+    "iron sword": 3,
+    "steel shovel": 3,
+    "axe": 4,
+}
+
+#Theo
+def dead(dead):
+    print(f"Dr. G: The D class died while {dead}. ")
+    exit()
+
+#Isak:  så att man kan öppna sitt inventory och se vad man har
+def inv():
+    print(f"You open your bag and find:  {inventory}")
+
+
+#Isaks AMAZING ATTACK system: argumentet är bara en av varelsena.   //MVH Isak
+def attack(creature):
+    global player_hp
+    global last
+    creature_name = creature[2]
+    creature_hp = creature[0]
+    print(f"You are fighting a {creature_name}!")
+    choice = (input(f"You have {inventory} in your inventory. (Chose a weapon: use only singular or use 'last' to use last weapon used):    "))
+    if "last" in choice.lower():
+        weapon_local = weapon[last]
+        creature_dmg = creature[1]
+        while True:
+            if player_hp >= 1:
+                if creature_hp >= 1:
+                    player_hp = player_hp - creature_dmg
+                    creature_hp = creature_hp - weapon_local
+                    print(f"You did {weapon[last]} dmg, the {creature_name} has {creature_hp}HP left!")
+                    print(f"The {creature_name} attacks you and does {creature_dmg} you have {player_hp}HP left!")
+                else:
+                    print("You won!")
+                    return()
+            else:
+                dead(f"fighting a {creature_name}")
+    else:
+        last = choice.lower()
+        weapon_local = weapon[choice.lower()]
+        creature_dmg = creature[1]
+        while True:
+            if player_hp >= 1:
+                if creature_hp >= 1:
+                    player_hp = player_hp - creature_dmg
+                    creature_hp = creature_hp - weapon_local
+                    print(f"You did {weapon[choice.lower()]} dmg, the {creature_name} has {creature_hp}HP left!")
+                    print(f"The {creature_name} attacks you and does {creature_dmg} you have {player_hp}HP left!")
+                else:
+                    print("You won!")
+                    return()
+            else:
+                dead(f"fighting a {creature_name}")  
 
 def starting_point():
     choice_1 = input("""You look around to orientate yourself, you seem to be standing in a courtyard, to your right is a graveyard.
 To your left you see an abandoned well, it is mossy and seems so old it is ready to fall apart.
 Behind you is a giant entrance gate, the whole area is surrounded by a dark, eerie, forest and a thick fog obscuring your vision.
 In front of you is a giant mansion, it looks very old, it is covered in moss, some of the windows are broken.""")
-    if "left" or "well" in choice_1.lower(): 
+    if "left" in choice_1.lower() or "well" in choice_1.lower(): 
         well()
-    if "right" or "graveyard" in choice_1.lower():
+    if "right" in choice_1.lower() or "graveyard" in choice_1.lower():
         graveyard()
-    if "behind" or "gate" in choice_1.lower():
+    if "behind" in choice_1.lower() or "gate" in choice_1.lower():
         gate()
     if "mansion" in choice_1.lower():
         door()
