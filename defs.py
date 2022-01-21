@@ -729,3 +729,8 @@ Dr. G: Well done D-class, you are soon done.
 You but in the key and walk out the door. Then all of a sudden you
 you fall a sleep. """)
                 out = 0
+            
+            else:
+                print("""
+again. 
+                      """)
