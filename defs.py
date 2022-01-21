@@ -673,6 +673,7 @@ card on the ground. You pick the card and walk out. """)
                                 iamman = 0
                                 no_go = 0
                                 done_room_2 = 1
+                                r_green_card = 1
                         
                             else:
                                 print("""
@@ -687,7 +688,7 @@ You leave the room for some reson. """)
                         print("""
 Agian. """)
 
-            elif "middle" in choice_go_questionmark.lower and m_blue_card == 1 and done_room_2 == 1:
+            elif "middle" in choice_go_questionmark.lower() and m_blue_card == 1 and done_room_2 == 1:
                 print("""
 You walk up to the door in the middle but when you get close 
 it dissapers. you stand there wondering what happened and 
