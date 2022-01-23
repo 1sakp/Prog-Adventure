@@ -477,6 +477,7 @@ You start doing the macarena...
 Suddenly you start hearing the macarena and everyone in the 
 crowed stands up. 
 You see all the entitys also starts doing the macarena. """)
+            The_room_of_many_rooms_and_other_stuff_it_also_have_an_exit_but_you_need_a_key_to_open_so_go_in_all_the_rooms_first_to_get_the_key()
       else:
             print("""
 You stand there still in confusion and don't know what
@@ -735,3 +736,4 @@ you fall a sleep. """)
                 print("""
 again. 
                       """)
+        starting_point()
