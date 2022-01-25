@@ -107,7 +107,7 @@ Where will you go?""")
         tree()
     elif "shed" in choice_graveyard.lower():
         shed()
-    elif "grave" or "graves" in choice_graveyard.lower():
+    elif "grave" in choice_graveyard.lower() or "graves" in choice_graveyard.lower():
         graves()
 
 def graves():
@@ -124,9 +124,9 @@ def graves():
 def shed():
     choice_shed = input("""You go up to the shed and push the door, it creaks open.
 Do you go in?""")
-    if "yes" or "enter" in choice_shed.lower():
+    if "yes" in choice_shed.lower() or "enter" in choice_shed.lower():
         inside_shed()
-    elif "no" or "leave" in choice_shed.lower():
+    elif "no" in choice_shed.lower() or "leave" in choice_shed.lower():
         graveyard()
 
 #you figt something here before you leave the shed. also shovel is added as an item in inventory 
@@ -139,9 +139,9 @@ def tree():
     choice_tree = input("""You go up to the tree. 
 The tree itself is not suspicious, although there is a recenty dug up path next to it.
 Do you want dig?""")
-    if "dig" or "yes" in choice_tree.lower():
+    if "dig" in choice_tree.lower() or "yes" in choice_tree.lower():
         print()
-    elif "no" or "leave" in choice_tree.lower():
+    elif "no" in choice_tree.lower() or "leave" in choice_tree.lower():
         print()
 
 def dug_up():
@@ -159,9 +159,9 @@ You need something to dig with...""")
 def well():
     choice_well = input("""The well looks ready to fall apart, the rope seems well attacked and should hold your weight. 
 Do you want to go down the rope?""")
-    if "yes" or "down" in choice_well.lower():
+    if "yes" in choice_well.lower() or "down" in choice_well.lower():
         well_bottom()
-    elif "no" or "leave" in choice_well.lower():
+    elif "no" in choice_well.lower() or "leave" in choice_well.lower():
         starting_point()
 
 def well_bottom():
@@ -198,9 +198,9 @@ def mansion_inside():
 It is quiet inside the mansion, there is dust everywhere.
 You hear some noises from the attic.
 Do you go up to the attic?""")
-    if "yes" or "attic" in choice_mansion.lower():
+    if "yes" in choice_mansion.lower() or "attic" in choice_mansion.lower():
         attic()
-    elif "no" or "leave" in choice_mansion.lower():
+    elif "no" in choice_mansion.lower() or "leave" in choice_mansion.lower():
         print("""Dr.G: You've come this far, this far, there is no turing back now...
     You look back to where the door had been and see it is gone, you go up to the attic.""")
         attic()
@@ -273,20 +273,20 @@ Will you try to knock the door?""")
     while knock_count <= 3:
         if knock_count == 3:
             dead("for being too curious.")
-        if "yes" or "knock" in choice_door.lower():
+        if "yes" in choice_door.lower() or "knock" in choice_door.lower():
             choice_knock = ("Do you knock again?")
             if "knock" in choice_knock.lower() or "yes" in choice_knock.lower():
                 knock_count = knock_count + 1 
-        elif "no" or "leave" in choice_door.lower():
+        elif "no" in choice_door.lower() or "leave" in choice_door.lower():
             starting_point()
 
 
 def window():
     choice_window = input("""You look through the window and see a dark room, the room seems empty. 
 Do you enter or do you leave?""")
-    if "leave" or "back" in choice_window.lower():
+    if "leave" in choice_window.lower() or "back" in choice_window.lower():
         starting_point()
-    elif "enter" or "go in" in choice_window.lower():
+    elif "enter" in choice_window.lower() or "go in" in choice_window.lower():
         window_room()
 
 def start_dominik():
