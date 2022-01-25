@@ -1,5 +1,8 @@
 
 #variabler
+from email.quoprimime import body_check
+
+
 last = "placeholder"
 
 #system designat av Isak
@@ -161,8 +164,13 @@ def well():
 Do you want to go down the rope?""")
     if "yes" in choice_well.lower() or "down" in choice_well.lower():
         well_bottom()
+<<<<<<< HEAD
     elif "no" in choice_well.lower() or "leave" in choice_well.lower():
         starting_point()
+=======
+    elif "no" or "leave" in choice_well.lower():
+        starting_pmoint()
+>>>>>>> b36c9b255b0b175dc9e2fbfd5e00a835cb143793
 
 def well_bottom():
     print("""The bottom of the well is dry, there is a hole in the wall. 
@@ -434,6 +442,7 @@ but before you notice annything unusual you suddenly black out!
 
 #START THEO
 
+#defen är bara masa text med typ en eller två val. Bara ett intro till delen
 def Theo_game_intro():
       print("""
 Dr. G: You are now in SCP-6969420-3. 
@@ -480,18 +489,254 @@ to do. You see everyone standing up. """)
             dead = """
 standing on stage and being eaten. """
             return dead
-            
+    
+#Theos main spel i de stora spelet 
 def The_room_of_many_rooms_and_other_stuff_it_also_have_an_exit_but_you_need_a_key_to_open_so_go_in_all_the_rooms_first_to_get_the_key():
-      out = 1
-      
-      while out == 1:
-            print("""
-When you are done dancing you enter backstage. 
-There you see 3 door (one to the left, one in the middle 
-and one to the right), a mirror on the wall, a plant
-in the corner. 
-                  """)
-            
-            choice = input("""
+        out = 1
+        l_red_card = 0
+        m_blue_card = 0
+        r_green_card = 0
+        done_room_1 = 0
+        done_room_2 = 0
+        key_1 = 0
+        print("""
+When you are done dancing you enter backstage. """)
 
-                           """)      
+        while out == 1:
+            print("""
+You see 3 door (one to the left, one in the middle and 
+one to the right), a mirror on the wall, a plant in the
+corner. """)
+            
+            choice_go_questionmark = input("""
+Dr. G: You should do somthing. You can't just stand there. """)
+            room_1 = 1
+            room_2 = 1
+            
+#när man går till mirror. man kan för röt kort och när man tar de ändras stället. 
+#innan man tar kort
+            if "mirror" in choice_go_questionmark.lower() and l_red_card == 0:
+                take_stuff = input("""
+You walk up to the mirror and see you yourself in a large 
+white room. You looka at it for a while and then you see 
+what looks like a red card sticking out from the side of 
+the mirror. """)
+                if "take" in take_stuff.lower() or "card" in take_stuff.lower() or "grab" in take_stuff.lower():
+                    l_red_card = 1
+                    print("""
+You look a little closer and see its a red key-card. You 
+take the card and look at the mirror agian. But once you 
+look you see that the reflection is gone. """)
+                    print("""
+Dr. G: You have a keycard so try to open one of the doors, 
+or you could you can just stand there. """)
+                
+                elif "leave" in take_stuff.lower() or "go" in take_stuff.lower():
+                    print("""
+you leave the mirror and look at the room agian. """)
+                
+                else:
+                    print("""
+Again. """)
+
+#efrter man tar kort
+            elif "mirror" in choice_go_questionmark.lower() and l_red_card == 1:
+                take_stuff = input("""
+You walk up to the mirror agoin and once agian you see
+no reflection. You look at it for a while and the go 
+away to do other stuff. """)
+
+#när man går till plantan inget händer man bara går dit och tillbaka
+            elif "plant" in choice_go_questionmark.lower() or "corner" in choice_go_questionmark.lower():
+                print("""
+You walk up to the plat look at it for for to long and 
+then you walk away. """)
+
+#de vänstra römet änras om man har de röda kortet eller inte
+#utan de röda kortet
+            elif "left" in choice_go_questionmark.lower() and l_red_card == 0:
+                print("""
+You walk up to the door on the left. You try to open it 
+but it won't open. you look around and se a red box where
+you cand place a card. You dicide to walk awey. """)
+            
+#med de röda kortet
+            elif "left" in choice_go_questionmark.lower() and l_red_card == 1 and done_room_1 == 0:
+                first = 1
+                chair_broke = 0
+                
+                if room_1 == 1:
+                    print("""
+You open the door at the left and enter. """)
+                    room_1 = 0
+                
+                #får olika utskrifter om man har sat sig på stolen eller inte
+                if chair_broke == 0:
+                    print("""
+When you look around you see a box on a table in front 
+of you and a chair on the other side. """)
+                else:
+                    print("""
+When you look around you see a box on a table in front 
+of you and a broken chair on the other side. """)
+                
+                #man väljer vad man ska göra 
+                while 1 == first:
+                    box2_t = 1
+                    box_xox = input("""
+Dr. G: Don't just stand there do something. """)
+                    
+                    #om man väljer att ta upp lådan första puslet
+                    if "box" in box_xox.lower() or "take" in box_xox.lower():
+                        print("""
+you look at the box and see a note and a keybad. On the 
+are ones and zeros and it goes. 
+
+0010
+0001
+1001
+0110 """)
+                        while 1 == box2_t:
+                            code_room_l_red = int(input("""
+Put in the code: """))
+                            if code_room_l_red == 2196:
+                                print("""
+You open the box slowly and inside you see a blue keycard. 
+You take ta card and the leave the room. """)
+                                m_blue_card = 1
+                                box2_t = 0
+                                first = 0
+                                done_room_1 = 1
+                            
+                            else:
+                                print("""
+Wrong, try agian. """)
+                    
+                    #om man väljer att säta sig på stolen
+                    elif "sit" in box_xox.lower() or "chair" in box_xox.lower():
+                        print("""
+You sit on the chair and after a wile you hear it crack. 
+After a while the chair brakes and you fall on the floor,
+after you fell you try to stand upp as fast as you can. """)
+                        chair_broke = 1
+                    
+                    #om man lämnar rumet
+                    elif "leave" in box_xox.lower() or "go" in box_xox.lower():
+                        print("""
+You leave the room where the box is. """)
+                        first = 0
+                        
+            elif "left" in choice_go_questionmark.lower() and l_red_card == 1 and done_room_1 == 1:
+                print("""
+You walk up to the door on the left but when you get close 
+it dissapers. you stand there wondering what happened and 
+after a while you walk awey, then you see the door apper 
+again. """)
+            
+#mitten rumet man behöver de blåa kortet
+#utran de blåa kortet
+            elif "middle" in choice_go_questionmark.lower() and m_blue_card == 0:
+                print("""
+You walk up to the door in the middle. You try to open it 
+but it won't open. you look around and se a blue box where
+you cand place a card. You dicide to walk awey. """)
+            
+#när du har de blåa kortet
+            elif "middle" in choice_go_questionmark.lower() and m_blue_card == 1 and done_room_2 == 0:
+                no_go = 1
+                if room_2 == 1:
+                    print("""
+You enter the room in the middle. """)
+                    room_2 = 0
+                   
+                   #väljer om puzel eller gå
+                puzzle_or_not = input("""
+You see a long room and at the end of it you see a bunch 
+of lines. 
+You walk closer and you see another keybad. 
+Dr. G: what are you doing look closer or you can just leave. """)
+
+                while 1 == no_go:
+                    #om man tog puzzle
+                    if "closer" in puzzle_or_not.lower():
+                        iamman = 1
+                        print("""
+when youi walk closer you see. 
+
+/|||/ + V
+V|| + ||||
+/|||/||| + |X
+|| + ||""")
+                        while 1 == iamman:
+                            code_i_dont_like_this_i_couldnt_do_what_i_wanted = int(input("""
+Figure out the code and out it in: """))
+                            
+                            if code_i_dont_like_this_i_couldnt_do_what_i_wanted == 1011174:
+                                print("""
+You hear a sound behind you. you look around and see a green 
+card on the ground. You pick the card and walk out. """)
+                                iamman = 0
+                                no_go = 0
+                                done_room_2 = 1
+                                r_green_card = 1
+                        
+                            else:
+                                print("""
+Wrong, try agian. """)
+                            
+                    elif "leave" in puzzle_or_not.lower() or "go" in puzzle_or_not.lower():
+                        print("""
+You leave the room for some reson. """)
+                        no_go = 0
+                    
+                    else:
+                        print("""
+Agian. """)
+
+            elif "middle" in choice_go_questionmark.lower() and m_blue_card == 1 and done_room_2 == 1:
+                print("""
+You walk up to the door in the middle but when you get close 
+it dissapers. you stand there wondering what happened and 
+after a while you walk awey, then you see the door apper 
+again. """)
+                        
+#högra rummet bhöver gröna kortet
+#utan görn kort
+            elif "right" in choice_go_questionmark.lower() and r_green_card == 0:
+                print("""
+You walk up to the door at the right. You try to open it 
+but it won't open. you look around and se a green box where
+you cand place a card. You dicide to walk awey. """)
+            
+            elif "right" in choice_go_questionmark.lower() and r_green_card == 1:
+                print("""
+You open the door and walk in. when you walk through the door
+you walk into a brick wall. you take a few steps back and 
+inspect the wall. When you do that you see a key in the wall and 
+you take it. """)
+                print("""
+you stand there a little bit more to look at the wall and then
+you walk away. """)
+                key_1 = 1
+            
+            elif "exit" in choice_go_questionmark.lower() and key_1 == 0:
+                print("""
+You start walking to the exit. 
+
+Dr. G: NOOOOOOOOOO! Don't go there. You can't right now. Please. 
+Don't do it. You just can't. """)
+                
+            elif "exit" in choice_go_questionmark.lower() and key_1 == 1: 
+                print("""
+You start to walk to the exit. 
+
+Dr. G: Well done D-class, you are soon done. 
+
+You but in the key and walk out the door. Then all of a sudden you
+you fall a sleep. """)
+                out = 0
+            
+            else:
+                print("""
+again. 
+                      """)
