@@ -165,7 +165,7 @@ Do you want to go down the rope?""")
     if "yes" or "down" in choice_well.lower():
         well_bottom()
     elif "no" or "leave" in choice_well.lower():
-        starting_pmoint()
+        starting_point()
 
 def well_bottom():
     print("""The bottom of the well is dry, there is a hole in the wall. 
